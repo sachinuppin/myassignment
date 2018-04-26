@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="" ng-controller="myCtrl">
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+<style>
+table, th, td {
+   border: 1px solid black;
+   padding:5px;
+}
+table {
+   border-collapse: collapse;
+   margin:10px;
+}
+</style>
+<body>
+<button ng-click="readCSV()">
+Click here to get data
+</button>
+<div id="divID">
+  <table>
+    <tr ng-repeat="x in data">
+      <td ng-repeat="mydata in x">{{ mydata }}</td>
+    </tr>
+  </table>
+</div>
+<div>
+<table>
+</table>
+</div>
+<script>
+function myCtrl($scope, $http) {
+	$scope.readCSV = function() {
+		$http.get('EamcetReport.csv').success($scope.processData);
+	};
+
+	$scope.processData = function(allText) {
+		var allTextLines = allText.split(/\r\n|\n/);
+		var headers = allTextLines[0].split(',');
+		var lines = [];
+
+		for ( var i = 0; i < allTextLines.length; i++) {
+			var data = allTextLines[i].split(',');
+			if (data.length == headers.length) {
+				var tarr = [];
+				for ( var j = 0; j < headers.length; j++) {
+					tarr.push(data[j]);
+				}
+				lines.push(tarr);
+			}
+		}
+		$scope.data = lines;
+	};
+}
+</script>
+</body>
+</html>
+

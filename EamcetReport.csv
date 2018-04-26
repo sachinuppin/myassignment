@@ -1,0 +1,16 @@
+region,district,city,college,studentName,studentId,studentRank
+rayalaseema,kurnool,allagadda,alfa,rama,2009RYS100,10
+rayalaseema,kurnool,allagadda,vidya,rama,2009RYS101,110
+rayalaseema,kurnool,allagadda,alfa,krishna,2009RYS200,20
+rayalaseema,kurnool,allagadda,vidya,krishna,2009RYS201,220
+rayalaseema,kadapa,produtoor,cbit,sita,2009RYS300,320
+rayalaseema,kadapa,mydukur,bharati,sita,2009RYS310,330
+telengana,hyderabad,khairathabad,sadan,radha,2009TRS310,350
+telengana,hyderabad,nampalli,decan,radha,2009TRS410,450
+telengana,hyderabad,nampalli,decan,geetha,2009TRS510,550
+telengana,nirmal,nirmal,nandana,arjun,2009TRS610,594
+kosta,eastGodavari,rajamandri,pragathi,kiran,2009KST700,732
+kosta,eastGodavari,rajamandri,pragathi,varun,2009KST800,742
+kosta,westGodavari,tadepalligudem,vasavi,vasavi,2009KST720,300
+kosta,westGodavari,narsapur,swarnandhra,swarna,2009KST721,1000
+kosta,westGodavari,narsapur,swarnandhra,swarna,2009KST722,1234
